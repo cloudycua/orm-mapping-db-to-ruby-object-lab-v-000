@@ -44,6 +44,7 @@ class Student
       SELECT COUNT id
       FROM students
     SQL
+    sql
   end
   
   def save
