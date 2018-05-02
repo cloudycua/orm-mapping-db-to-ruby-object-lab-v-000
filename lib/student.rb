@@ -46,6 +46,7 @@ class Student
       WHERE grade = 9
     SQL
     sql
+    binding.pry
   end
   
   def save
