@@ -40,7 +40,12 @@ class Student
   end
   
   def count_all_students_in_grade_9
-    
+    sql = <<-SQL
+      SELECT *
+      FROM students
+      WHERE name = ?
+      LIMIT 1
+    SQL
   end
   
   def save
