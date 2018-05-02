@@ -39,7 +39,7 @@ class Student
     end.first  
   end
   
-  def count_all_students_in_grade_9
+  def self.count_all_students_in_grade_9
     sql = <<-SQL
       SELECT *
       FROM students
@@ -55,8 +55,7 @@ class Student
       VALUES (?, ?)
     SQL
 
-    all_in_9 = DB[:conn].execute(sql, self.name, self.grade)
-    all_in_9
+    DB[:conn].execute(sql, self.name, self.grade)
   end
   
   def self.create_table
