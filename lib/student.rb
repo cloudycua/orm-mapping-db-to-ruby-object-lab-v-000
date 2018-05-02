@@ -55,7 +55,8 @@ class Student
       VALUES (?, ?)
     SQL
 
-    DB[:conn].execute(sql, self.name, self.grade)
+    all_in_9 = DB[:conn].execute(sql, self.name, self.grade)
+    all_in_9
   end
   
   def self.create_table
